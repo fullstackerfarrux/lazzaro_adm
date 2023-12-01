@@ -15,7 +15,7 @@ const Header = () => {
     e.preventDefault();
     let { promo_name, percent, initial_amount, limit } = e.target;
 
-    fetch("http://localhost:4001/promo/create", {
+    fetch("https://api.lazzaroburger.uz/promo/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

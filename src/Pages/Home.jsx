@@ -27,7 +27,7 @@ const Home = () => {
     }
 
     async function get() {
-      await fetch("http://localhost:4001/products", {
+      await fetch("https://api.lazzaroburger.uz/products", {
         method: "GET",
       })
         .then((res) => res.json())

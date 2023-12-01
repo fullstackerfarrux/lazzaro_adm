@@ -9,7 +9,7 @@ const Users = () => {
 
   useEffect(() => {
     async function get() {
-      await fetch("http://localhost:4001/users/order", {
+      await fetch("https://api.lazzaroburger.uz/users/order", {
         method: "GET",
       })
         .then((res) => res.json())

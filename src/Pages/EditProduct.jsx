@@ -43,7 +43,7 @@ const EditProduct = () => {
       images: uploadImages,
     });
 
-    await fetch("http://localhost:4001/product/edit", {
+    await fetch("https://api.lazzaroburger.uz/product/edit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const EditProduct = () => {
     e.preventDefault();
     let { category_name } = e.target;
 
-    await fetch("http://localhost:4001/category/create", {
+    await fetch("https://api.lazzaroburger.uz/category/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const EditProduct = () => {
           : toast.error("Invalid token!")
       );
 
-    await fetch("http://localhost:4001/categories", {
+    await fetch("https://api.lazzaroburger.uz/categories", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -94,7 +94,7 @@ const EditProduct = () => {
   if (typeof id !== "undefined" || productId.id !== "") {
     useEffect(() => {
       async function check() {
-        await fetch("http://localhost:4001/product", {
+        await fetch("https://api.lazzaroburger.uz/product", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -109,7 +109,7 @@ const EditProduct = () => {
             setUploadImages(data.product[0].images);
           });
 
-        await fetch("http://localhost:4001/categories", {
+        await fetch("https://api.lazzaroburger.uz/categories", {
           method: "GET",
         })
           .then((res) => res.json())

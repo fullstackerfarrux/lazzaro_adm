@@ -7,7 +7,7 @@ const Login = () => {
     e.preventDefault();
     let { username, password } = e.target;
 
-    await fetch("http://localhost:4001/login", {
+    await fetch("https://api.lazzaroburger.uz/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

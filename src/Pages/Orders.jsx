@@ -26,7 +26,7 @@ const Orders = () => {
 
   useEffect(() => {
     async function get() {
-      await fetch("http://localhost:4001/orders", {
+      await fetch("https://api.lazzaroburger.uz/orders", {
         method: "GET",
       })
         .then((res) => res.json())

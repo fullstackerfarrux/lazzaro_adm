@@ -9,7 +9,7 @@ const Settings = () => {
 
   useEffect(() => {
     async function get() {
-      await fetch("http://localhost:4001/delivery", {
+      await fetch("https://api.lazzaroburger.uz/delivery", {
         method: "GET",
       })
         .then((res) => res.json())
@@ -23,7 +23,7 @@ const Settings = () => {
     e.preventDefault();
     let { oldpassword, newpassword } = e.target;
 
-    await fetch("http://localhost:4001/chnage/password", {
+    await fetch("https://api.lazzaroburger.uz/chnage/password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -46,7 +46,7 @@ const Settings = () => {
     e.preventDefault();
     let { newprice } = e.target;
 
-    await fetch("http://localhost:4001/chnage/delivery", {
+    await fetch("https://api.lazzaroburger.uz/chnage/delivery", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -17,7 +17,7 @@ const Banner = () => {
 
   useEffect(() => {
     async function get() {
-      await fetch("http://localhost:4001/banner/get", {
+      await fetch("https://api.lazzaroburger.uz/banner/get", {
         method: "GET",
       })
         .then((res) => res.json())
@@ -56,7 +56,7 @@ const Banner = () => {
       img_url: uploadImages,
     });
 
-    await fetch("http://localhost:4001/banner/create", {
+    await fetch("https://api.lazzaroburger.uz/banner/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Banner = () => {
       imges_url: images,
     });
 
-    await fetch("http://localhost:4001/banner/delete", {
+    await fetch("https://api.lazzaroburger.uz/banner/delete", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ const Promocode = () => {
   const [deleteText, setDeleteText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4001/promo/get", {
+    fetch("https://api.lazzaroburger.uz/promo/get", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const Promocode = () => {
   }, []);
 
   const handleDelete = () => {
-    fetch("http://localhost:4001/promo/delete", {
+    fetch("https://api.lazzaroburger.uz/promo/delete", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

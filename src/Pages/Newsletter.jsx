@@ -43,7 +43,7 @@ const Newsletter = () => {
     let videos = uploadVideos.length > 0 ? uploadVideos : "";
     let images = uploadImages.length > 0 ? uploadImages : "";
 
-    await fetch("http://localhost:4001/newsletter", {
+    await fetch("https://api.lazzaroburger.uz/newsletter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

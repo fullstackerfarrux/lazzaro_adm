@@ -11,7 +11,7 @@ const Products = ({ products }) => {
   const { cart } = useSelector((cart) => cart);
 
   const deleteProduct = async (id) => {
-    await fetch("http://localhost:4001/product/delete", {
+    await fetch("https://api.lazzaroburger.uz/product/delete", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const Products = ({ products }) => {
   };
 
   const changeStatus = async (id) => {
-    await fetch("http://localhost:4001/product/status", {
+    await fetch("https://api.lazzaroburger.uz/product/status", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
