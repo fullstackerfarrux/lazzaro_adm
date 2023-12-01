@@ -568,14 +568,12 @@ a {
             .editIcon {
               position: absolute;
               right: 0;
-              // right: -10px;
-              // top: -10px;
             }
             img {
-              max-width: 106px;
-              min-width: 106px;
-              height: 142px;
-              object-fit: cover;
+              max-width: 175px;
+              min-width: 171px;
+              height: 145px;
+              object-fit: clip;
               overflow: hidden;
             }
           }

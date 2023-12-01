@@ -309,7 +309,7 @@ const CreateProduct = () => {
                               );
                             }}
                           />
-                          <img src={image} alt="collagen" />
+                          <img src={image} alt="lazzaro" />
                         </div>
                       );
                     })}
