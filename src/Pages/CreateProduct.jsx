@@ -39,7 +39,7 @@ const CreateProduct = () => {
     );
 
     const data = await res.json();
-    const uploadImage = [...uploadImages, data.secure_url];
+    const uploadImage = [data.secure_url];
 
     setUploadImages(uploadImage);
   };
