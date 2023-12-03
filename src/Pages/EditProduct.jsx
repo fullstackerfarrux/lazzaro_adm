@@ -9,6 +9,7 @@ const EditProduct = () => {
   const [uploadImages, setUploadImages] = useState([]);
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState(false);
+  const [categoryName, setCategoryName] = useState();
   const [categories, setCategories] = useState([]);
 
   const onSelectFile = async (e) => {
@@ -164,23 +165,16 @@ const EditProduct = () => {
                 name="category"
                 id="category"
                 required
-                value={product.category_name}
               >
                 <option value="category" disabled>
                   Выбрать категорию
                 </option>
                 {categories.length > 0
-                  ? categories.map((c, index) =>
-                      product.category_name == c.category_name ? (
-                        <option value={product.category_name} key={index}>
-                          {product.category_name}
-                        </option>
-                      ) : (
-                        <option value={c.category_name} key={index}>
-                          {c.category_name}
-                        </option>
-                      )
-                    )
+                  ? categories.map((c, index) => (
+                      <option value={c.category_name} key={index}>
+                        {c.category_name}
+                      </option>
+                    ))
                   : ""}
               </select>
             </div>
